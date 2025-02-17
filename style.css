@@ -8,10 +8,10 @@
 }
 
 body {
-  /* Using a sans-serif for a modern look */
-  font-family: "Poppins", sans-serif;
+  /* Using Times New Roman now */
+  font-family: "Times New Roman", Times, serif;
   background-color: #f9f9f9;
-  color: #fff; /* We'll adjust section colors below */
+  color: #fff;
   line-height: 1.6;
 }
 
@@ -88,12 +88,12 @@ section p {
 
 /* Project Cards in Portfolio */
 .project {
-  background-color: #333; /* Slightly lighter/darker if you prefer */
+  background-color: #333; 
   margin: 2rem auto;
   max-width: 800px;
   padding: 2rem;
   border-radius: 5px;
-  text-align: left; /* Project text left-aligned, if desired */
+  text-align: left;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -119,8 +119,8 @@ form {
   max-width: 600px;
   margin: 0 auto;
   padding: 2rem;
-  background: #ffffff; /* White form background for contrast */
-  color: #333; /* Dark text inside the form */
+  background: #ffffff;
+  color: #333;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: left;
@@ -166,16 +166,14 @@ footer {
   font-size: 0.9rem;
 }
 
-/* LinkedIn Bubble (Optional) */
-.linkedin-bubble {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border: 3px solid #0077b5;
-  transition: transform 0.3s;
-  margin-bottom: 1rem;
-}
-
-.linkedin-bubble:hover {
-  transform: scale(1.1);
+/* 
+  Remove the bubble style.
+  If you still want the image to have a certain size,
+  you can add a simple rule, for example:
+*/
+.linkedin-image {
+  /* Example: Just a fixed width, no circle, no hover scale */
+  width: 60px; 
+  /* height: auto;  or set a fixed height if you want */
+  /* border-radius: 0;  if you previously had a radius, set it to 0 or remove entirely */
 }
