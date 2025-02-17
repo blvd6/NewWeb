@@ -1,213 +1,181 @@
-/* General Styles */
-body {
-    font-family: "Times New Roman", Times, serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background: #f9f9f9; /* Subtle light background */
+/* -----------------------------------------------------
+   General / Reset
+----------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Header */
+body {
+  /* Using a sans-serif for a modern look */
+  font-family: "Poppins", sans-serif;
+  background-color: #f9f9f9;
+  color: #fff; /* We'll adjust section colors below */
+  line-height: 1.6;
+}
+
+/* -----------------------------------------------------
+   Header
+----------------------------------------------------- */
 header {
-    background: #051e57;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    position: relative;
+  background: #051e57; /* Navy background */
+  text-align: center;
+  padding: 2rem 0;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    animation: fadeIn 2s ease-in-out;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
 }
 
 header p {
-    font-size: 1.2rem;
-    margin-top: 5px;
-    animation: slideIn 2s ease-out;
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 1rem;
 }
 
-/* Navigation */
+/* Navigation Bar */
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+nav li {
+  margin: 0;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s, transform 0.3s;
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s;
 }
 
-nav ul li a:hover {
-    color: #f1c40f;
-    transform: scale(1.1);
+nav a:hover {
+  color: #f1c40f;
+  transform: scale(1.1);
 }
 
-/* Section */
+/* -----------------------------------------------------
+   Sections
+----------------------------------------------------- */
 section {
-    padding: 20px;
+  background-color: #2b2b2b; /* Dark/charcoal background */
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
 }
 
-h2 {
-    color: #051e57;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    position: relative;
-    animation: fadeIn 2s ease-in-out;
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-h2::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 4px;
-    background: #051e57;
-    margin: 10px auto;
+/* Center paragraph text and limit width for readability */
+section p {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
-/* About Section */
-#about {
-    background: #e6f2ff;
-    border-top: 5px solid #051e57;
-}
-
-/* Portfolio Section */
-#portfolio {
-    background: #ffffff;
-}
-
+/* Project Cards in Portfolio */
 .project {
-    margin: 20px 0;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    background: #f9f9f9;
-    position: relative;
-    overflow: hidden;
+  background-color: #333; /* Slightly lighter/darker if you prefer */
+  margin: 2rem auto;
+  max-width: 800px;
+  padding: 2rem;
+  border-radius: 5px;
+  text-align: left; /* Project text left-aligned, if desired */
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .project h3 {
-    color: #051e57;
+  color: #f1c40f; /* Accent color for project titles */
+  margin-bottom: 1rem;
 }
 
 .project p {
-    color: #333;
+  color: #fff;
+  margin-bottom: 0;
 }
 
-/* Contact Section */
-#contact {
-    background: #e6f2ff;
-    border-top: 5px solid #051e57;
-}
-
+/* -----------------------------------------------------
+   Contact Form
+----------------------------------------------------- */
 form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #ffffff; /* White form background for contrast */
+  color: #333; /* Dark text inside the form */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
 }
 
 form label {
-    display: block;
-    margin: 10px 0 5px;
+  display: block;
+  margin: 1rem 0 0.5rem;
 }
 
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 10px;
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 1rem;
 }
 
 button {
-    background: #051e57;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
+  background: #051e57;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
 }
 
 button:hover {
-    background: #3b4c91;
-    transform: translateY(-3px);
+  background: #3b4c91;
+  transform: translateY(-3px);
 }
 
-/* Footer */
+/* -----------------------------------------------------
+   Footer
+----------------------------------------------------- */
 footer {
-    text-align: center;
-    padding: 20px;
-    background: #f1f1f1;
-    color: #333;
-    font-size: 0.9rem;
+  background: #f1f1f1; /* Light background */
+  color: #333;
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* --- New Styles --- */
-
-/* Profile Picture Styles */
-.profile-container {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.profile-picture {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #051e57;
-}
-
-/* LinkedIn Bubble Styles */
+/* LinkedIn Bubble (Optional) */
 .linkedin-bubble {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 3px solid #0077B5; /* LinkedIn brand blue */
-    transition: transform 0.3s;
-    margin-bottom: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid #0077b5;
+  transition: transform 0.3s;
+  margin-bottom: 1rem;
 }
 
 .linkedin-bubble:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
