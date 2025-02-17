@@ -1,33 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Professional Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theodora Stavrou - E-Profile</title>
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Your Name</h1>
-    <p>Computer Engineering University Student</p>
-  </header>
-  
-  <!-- Personal Profile Section -->
-  <section id="profile">
-    <img src="path/to/your-profile-image.jpg" alt="Your Name" class="profile-picture">
-  </section>
-  
-  <!-- Main Content -->
-  <main>
-    <p>Welcome to my professional website!</p>
-    <!-- Additional content goes here -->
-  </main>
-  
-  <!-- LinkedIn Bubble in Footer -->
-  <footer>
-    <a href="https://www.linkedin.com/in/yourlinkedinprofile" target="_blank">
-      <img src="path/to/your-bubble-image.png" alt="LinkedIn Profile" class="linkedin-bubble">
-    </a>
-  </footer>
+    <header>
+        <h1>Theodora Stavrou</h1>
+        <p>University Student</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About me</h2>
+        <!-- Profile Picture Added -->
+        <div class="profile-container">
+            <img src="images/profile.jpg" alt="Theodora Stavrou Profile" class="profile-picture">
+        </div>
+        <p>Hello, my name is Theodora Stavrou and I am a first-year student at the Cyprus University of Technology studying Computer Engineering and Informatics.</p>
+    </section>
+
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="project">
+            <h3>EYP Alumni</h3>
+            <p>I took part in the 17th National Session of the Cyprus European Youth Parliament as a delegate in the summer of 2023</p>
+        </div>
+        <div class="project">
+            <h3>IELTS</h3>
+            <p>In March of 2024 I took the Academic IELTS examination with an overall band score of 7.5 </p>
+        </div>
+        <div class="project">
+            <h3>IGCSE</h3>
+            <p>In June of 2022 I took the IGCSE examination with an A* Grade</p>
+        </div>
+        <div class="project">
+            <h3>ECDL</h3>
+            <p>
+                I have an ECDL Standard Certificate by completing the following modules:<br>
+                1. Online Collaboration (04.02.2017)<br>
+                2. Word Processing (27.05.2017)<br>
+                3. Presentations (03.02.2018)<br>
+                4. Spreadsheets (26.05.2018)<br>
+                5. Online Essentials (26.01.2019)<br>
+                6. Using Databases (25.05.2019)<br>
+                7. Computer Essentials (01.02.2020)
+            </p>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="mailto:theodorra.stav@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <!-- LinkedIn Bubble Image Added -->
+        <a href="https://www.linkedin.com/in/yourlinkedinprofile" target="_blank">
+            <img src="images/linkedin-bubble.png" alt="LinkedIn Profile" class="linkedin-bubble">
+        </a>
+        <p>&copy; 2025 Theodora Stavrou. All rights reserved.</p> 
+    </footer>
 </body>
 </html>
