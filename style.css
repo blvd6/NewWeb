@@ -1,179 +1,118 @@
-/* -----------------------------------------------------
-   General / Reset
------------------------------------------------------ */
+/* General Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+/* Variables */
+:root {
+    --background: #121212;
+    --text-color: #E0E0E0;
+    --accent1: #70060e;
+    --accent2: #020433;
+}
+
+/* Body Styling */
 body {
-  /* Using Times New Roman now */
-  font-family: "Times New Roman", Times, serif;
-  background-color: #f9f9f9;
-  color: #fff;
-  line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background);
+    color: var(--text-color);
+    scroll-behavior: smooth;
 }
 
-/* -----------------------------------------------------
-   Header
------------------------------------------------------ */
-header {
-  background: #051e57; /* Navy background */
-  text-align: center;
-  padding: 2rem 0;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  color: #fff;
-}
-
-header p {
-  font-size: 1.2rem;
-  color: #fff;
-  margin-bottom: 1rem;
-}
-
-/* Navigation Bar */
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 0;
-  margin: 0;
-}
-
-nav li {
-  margin: 0;
+/* Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: var(--background);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 2px solid var(--accent2);
 }
 
 nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s, transform 0.3s;
+    margin-left: 20px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
 }
 
 nav a:hover {
-  color: #f1c40f;
-  transform: scale(1.1);
+    color: var(--accent1);
 }
 
-/* -----------------------------------------------------
-   Sections
------------------------------------------------------ */
+/* Hero */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+/* Sections */
 section {
-  background-color: #2b2b2b; /* Dark/charcoal background */
-  color: #fff;
-  padding: 4rem 2rem;
-  text-align: center;
+    padding: 60px 20px;
+    border-bottom: 1px solid var(--accent2);
 }
 
-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+h2 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--accent1);
+    margin-bottom: 20px;
 }
 
-/* Center paragraph text and limit width for readability */
-section p {
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.6;
+/* Projects */
+.projects-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-/* Project Cards in Portfolio */
-.project {
-  background-color: #333; 
-  margin: 2rem auto;
-  max-width: 800px;
-  padding: 2rem;
-  border-radius: 5px;
-  text-align: left;
-  transition: transform 0.3s, box-shadow 0.3s;
+.project-card {
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 10px;
 }
 
-.project:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+.project-card img {
+    width: 100%;
+    border-radius: 5px;
 }
 
-.project h3 {
-  color: #f1c40f; /* Accent color for project titles */
-  margin-bottom: 1rem;
-}
-
-.project p {
-  color: #fff;
-  margin-bottom: 0;
-}
-
-/* -----------------------------------------------------
-   Contact Form
------------------------------------------------------ */
+/* Contact Form */
 form {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 2rem;
-  background: #ffffff;
-  color: #333;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-form label {
-  display: block;
-  margin: 1rem 0 0.5rem;
+input, textarea, button {
+    padding: 10px;
+    font-size: 1rem;
 }
 
-form input,
-form textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-bottom: 1rem;
-}
-
+/* Button */
 button {
-  background: #051e57;
-  color: #fff;
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.3s;
+    background-color: var(--accent1);
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
 }
 
 button:hover {
-  background: #3b4c91;
-  transform: translateY(-3px);
-}
-
-/* -----------------------------------------------------
-   Footer
------------------------------------------------------ */
-footer {
-  background: #f1f1f1; /* Light background */
-  color: #333;
-  text-align: center;
-  padding: 2rem;
-  font-size: 0.9rem;
-}
-
-/* 
-  Remove the bubble style.
-  If you still want the image to have a certain size,
-  you can add a simple rule, for example:
-*/
-.linkedin-image {
-  /* Example: Just a fixed width, no circle, no hover scale */
-  width: 60px; 
-  /* height: auto;  or set a fixed height if you want */
-  /* border-radius: 0;  if you previously had a radius, set it to 0 or remove entirely */
+    background-color: var(--accent2);
 }
